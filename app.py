@@ -5,6 +5,6 @@ app = Flask(__name__)
 
 
 
-@app.route("/learning/")
+@app.route("/")
 def learning():
     return render_template("learning.jinja.html")
