@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 import pandas_datareader.data as pdr
 import yfinance as yf
 import datasource
@@ -25,3 +25,11 @@ def priceing():
 @app.route("/about/")
 def about():
     return render_template("about.jinja.html")
+
+@app.route("/form/",methods=["GET","POST"])
+def form():
+    if request.method=="POST":
+        print(f"{request.form['yourname']},這是post,您好")
+        return render_template("form.jinja.html")
+    elif request.method=="GET":
+        return render_template("form.jinja.html")

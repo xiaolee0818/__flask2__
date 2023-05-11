@@ -1,0 +1,28 @@
+{% extends "base.jinja.html" %}
+
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+
+{% block title%}
+表單
+{% endblock %}
+
+{% block content%}
+<div class="container-md">
+    <form action="" method="post">
+        <input type="text" name="yourname" value="請填姓名" required>
+        <select>
+            <option>請選擇你最愛的寵物</option>
+            <option>Dog</option>
+            <option>Cat</option>
+            <option>Hamster</option>
+            <option>Parrot</option>
+            <option>Spider</option>
+            <option>Goldfish</option>
+        </select>
+        <input type="submit" text="送出">
+    </form>
+</div>
+{% endblock %}

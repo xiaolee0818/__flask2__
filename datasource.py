@@ -16,6 +16,7 @@ def get_stock_data(stock_id):
     
     yf.pdr_override()
     stockid_str=f'{stock_id}.TW'
+    
     current=os.path.abspath("./")
     current_date=datetime.now()
     stock_id="2303"
